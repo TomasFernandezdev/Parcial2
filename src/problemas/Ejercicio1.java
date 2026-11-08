@@ -1,7 +1,7 @@
 package problemas;
 
 
-public class Main{
+public class Ejercicio1 {
     public Stack<Operation> obtenerUltimasConfirmadas(Stack<Operation> historial, int n) {
         if(n<= 0 || historial.isEmpty()){
             return new Stack<>();
