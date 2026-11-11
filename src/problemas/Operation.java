@@ -24,4 +24,9 @@ public class Operation {
     public void setConfirmed(boolean confirmed) {
         isConfirmed = confirmed;
     }
+
+    @Override
+    public String toString() {
+        return code + (isConfirmed ? "(Confirmada)" : "(No confirmada)");
+    }
 }

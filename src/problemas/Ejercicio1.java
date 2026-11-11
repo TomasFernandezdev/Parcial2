@@ -2,25 +2,7 @@ package problemas;
 
 
 public class Ejercicio1 {
-    public Stack<Operation> obtenerUltimasConfirmadas(Stack<Operation> historial, int n) {
-        if(n<= 0 || historial.isEmpty()){
-            return new Stack<>();
-        }
-        Stack<Operation> aux = new Stack<>();
-        recursividad(historial.getTop(), aux, n);
-        return aux;
-    }
-    public void recursividad(Node<Operation> historial, Stack<Operation> aux, int n){
-        if(historial == null || n == 0 ){
-            return;
-        }
-        if(historial.getData().isConfirmed()){
-            recursividad(historial.getNext() ,aux, --n);
-            aux.push(historial.getData());
-        }else {
-            recursividad(historial.getNext(), aux, n);
-        }
-    }
+
     public Stack<Operation> obtenerUltimasConfirmadas2(Stack<Operation> historial, int n) {
         if(n<= 0 || historial.isEmpty()){
             return new Stack<>();
