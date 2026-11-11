@@ -1,7 +1,5 @@
 package problemas;
 
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class Main {
 
@@ -110,16 +108,15 @@ public class Main {
         // =============== PUNTO 3 ==================
         // ==========================================
         System.out.println("\n\n=============== PUNTO 3 ===============\n");
-        Queue<Request> puntoTres = new LinkedList<>();
+        Queue<Request> puntoTres = new Queue<>();
 
-        puntoTres.add(new Request("S1", "NORMAL", 10));
-        puntoTres.add(new Request("S2", "HIGH", 30));
-        puntoTres.add(new Request("S3", "HIGH", 15));
-        puntoTres.add(new Request("S4", "NORMAL", 5));
+        puntoTres.encolar(new Request("S1", Priority.NORMAL, 10));
+        puntoTres.encolar(new Request("S2", Priority.ALTA, 30));
+        puntoTres.encolar(new Request("S3", Priority.ALTA, 15));
+        puntoTres.encolar(new Request("S4", Priority.NORMAL, 5));
 
-        RequestManager requestManager = new RequestManager();
-
-        requestManager.selectRequest(puntoTres, 25);
+        Ejercicio3 tres = new Ejercicio3();
+        tres.SeleccionarSolicitudes(puntoTres, 25);
 
 
         // ==========================================

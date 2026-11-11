@@ -3,10 +3,10 @@ package problemas;
 public class Request {
 
     private String code;
-    private String priority;
+    private Priority priority;
     private int duration;
 
-    public Request(String code, String priority, int duration) {
+    public Request(String code, Priority priority, int duration) {
         this.code = code;
         this.priority = priority;
         this.duration = duration;
@@ -20,11 +20,11 @@ public class Request {
         this.code = code;
     }
 
-    public String getPriority() {
+    public Priority getPriority() {
         return priority;
     }
 
-    public void setPriority(String priority) {
+    public void setPriority(Priority priority) {
         this.priority = priority;
     }
 
